@@ -1,0 +1,27 @@
+.technology {
+  width: auto;
+  height: 800px;
+
+
+  .container-fluid {
+    display: inline-flex;
+    .col-md-4 {
+      height: 20px;
+      width: 100%;
+      font-family: 'Roboto', sans-serif;
+
+
+
+    }
+    .col-md-8 {
+      .img_flex {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+      }
+    }
+  }
+}

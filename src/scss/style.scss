@@ -1,0 +1,16 @@
+//importing stylesheets
+
+
+font-family {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+$primary_color1: white;
+$hightlight_color1: #e62739;
+
+@import 'header';
+@import 'splash';
+@import 'technology';
+@import 'counter';
