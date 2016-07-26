@@ -1,0 +1,19 @@
+.splash {
+  .container {
+    display: flex;
+    flex-direction: row;
+
+    #splash_text {
+
+      font-family: 'Roboto';
+      font-size: 300%;
+      font-weight: bold;
+      padding-top: 200px;
+      position: center;
+      color: white;
+      text-shadow: 1px 1px 4px blue;
+      text-align: center;
+
+    }
+  }
+}

@@ -1,5 +1,8 @@
 //importing stylesheets
 
+//default asset directory
+$ImgAssetPath: '../assets/img';
+$MediaAssetPath: '../assets/media';
 
 font-family {
   font-family: 'Roboto', sans-serif;
@@ -11,6 +14,6 @@ $primary_color1: white;
 $hightlight_color1: #e62739;
 
 @import 'header';
-@import 'splash';
+@import './home/home_style';
 @import 'technology';
 @import 'counter';

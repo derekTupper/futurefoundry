@@ -29,7 +29,7 @@ class Header extends Component {
     return(
       <div className="main_header">
         <nav onScroll={this.handleScroll} className='navbar-fixed-top item animated fadein' id={this.state.id}  >
-          <p className="brand">future foundry</p>
+          <p className="brand">futurefoundry</p>
         </nav>
       </div>
 

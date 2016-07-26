@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
   entry: [
-    './src/index.js'
+    './src/app.jsx'
   ],
   output: {
     path: __dirname,
@@ -11,12 +11,8 @@ module.exports = {
   },
 
   module: {
-    loaders: [{
-      test: /.js$/,
-      exclude: /node_modules/,
-      loader: 'babel'
-    },
-
+    loaders: [
+    { test: /\.(js$|jsx$)/, exclude: /(node_modules)/ , loader: "babel-loader"},
     { test: /\.(png|jpg|jpeg)$/, exclude: /(node_modules)/, loader: 'url-loader?limit=2000000' },
     { test: /\.css$/, loaders: ["style-loader", "css-loader"] },
     { test: /\.scss$/, loaders: ["style-loader", "css-loader", "sass-loader"] },
@@ -38,7 +34,6 @@ module.exports = {
   },
   plugins: [
     new webpack.ProvidePlugin({
-      window.jQuery: "jquery",
        $: "jquery",
        jQuery: "jquery"
     })

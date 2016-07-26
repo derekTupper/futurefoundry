@@ -1,0 +1,11 @@
+.home {
+  background-image: url('#{$ImgAssetPath}/home/homeBackground.jpg');
+  background-size: auto;
+  max-width: 100%;
+  min-height: 925px;
+  position: relative;
+
+  @import 'splashText';
+  @import 'services';
+
+}

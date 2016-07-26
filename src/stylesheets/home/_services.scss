@@ -1,0 +1,38 @@
+.services {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  background-color: transparent;
+  display: inline-flex;
+
+
+  #inactive {
+    background-color: transparent;
+  }
+
+  #active {
+    background-color: white;
+  }
+
+
+  .services_tile {
+    height: 100%;
+    width: auto;
+    margin: auto;
+
+
+
+    #services_img {
+      padding-top: 10px;
+      position: center;
+    }
+
+    #services_text {
+     font-family: 'Roboto';
+     font-size: 200%;
+      margin-top: 10px;
+      text-align: center;
+    }
+  }
+}
