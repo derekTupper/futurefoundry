@@ -1,4 +1,4 @@
-.services {
+.service_tiles {
   width: 100%;
   height: auto;
   position: absolute;
@@ -16,7 +16,8 @@
   }
 
   #active {
-    background: rgba(54, 25, 25, .5);
+    width: 240px;
+    background: rgba(255, 255, 255, .75);
     -webkit-transition: background .5s linear;
     -moz-transition: background  .5s linear;
     -ms-transition: background  .5s linear;
@@ -52,9 +53,10 @@
       font-family: 'Roboto';
       font-size: 200%;
       padding-top: 15px;
-      color: white;
+      color: black;
       text-align: center;
-      text-shadow: 1.2px 1.2px 5px black;
+      // text-shadow: 1.2px 1.2px 5px black;
+
     }
   }
 }

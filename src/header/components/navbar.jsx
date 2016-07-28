@@ -1,7 +1,7 @@
 import React, { Component, ExecutionEnvironment }  from 'react';
 
 
-class Header extends Component {
+export default class Navbar extends Component {
   constructor() {
     super();
     this.state = {id: "inactive"};
@@ -29,13 +29,20 @@ class Header extends Component {
     return(
       <div className="main_header">
         <nav onScroll={this.handleScroll} className='navbar-fixed-top item animated fadein' id={this.state.id}  >
-          <p className="brand">futurefoundry</p>
+          <p onScroll={this.handleScroll} className="brand" id={this.state.id} >futurefoundry</p>
+          <div class="dropdown">
+            <a id="dLabel" data-target="#" href="http://example.com" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Dropdown trigger
+              <span class="caret"></span>
+            </a>
+
+            <ul class="dropdown-menu" aria-labelledby="dLabel">
+              ...
+            </ul>
+          </div>
         </nav>
       </div>
 
     );
   }
 }
-
-
-export default Header;

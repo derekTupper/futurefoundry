@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 
-import ImgAssetPath from '../homeContainer';
-import MediaAssetPath from '../homeContainer';
-
 
 export default class Services extends Component  {
   render() {
     return(
-      <div className='services'>
+      <div className='service_tiles'>
         <WebServices />
         <ProductConsulting />
         <Button />

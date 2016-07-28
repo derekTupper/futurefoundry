@@ -7,13 +7,10 @@ import 'bootstrap/dist/js/bootstrap.js';
 import './stylesheets/style.scss';
 
 //Import Site features refactored to Pods
-import Home from './home/homeContainer'
-
-//Import un-refactored components to app
-import Header from './components/header';
-import Tech from './components/technology';
-import Counter from './components/counter';
-
+import Header from './header/headerContainer';
+import Home from './home/homeContainer';
+import Services from './services/servicesContainer';
+import Counter from './counter/counterContainer';
 
 
 export default class App extends Component {
@@ -23,7 +20,8 @@ export default class App extends Component {
         <Header />
         <Home />
         <Counter />
-        <Tech />
+        {/*<Tech />*/}
+        <Services />
       </div>
     );
   }

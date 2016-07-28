@@ -1,0 +1,44 @@
+.navbar-fixed-top {
+  width: auto;
+  height: 75px;
+}
+#inactive {
+  background-color: transparent;
+  margin-bottom: auto;
+  border: 0;
+  position: fixed;
+  -webkit-transition: background-color .5s linear;
+  -moz-transition: background-color .5s linear;
+  -ms-transition: background-color .5s linear;
+  -o-transition: background-color .5s linear;
+  transition: background-color .5s linear;
+
+},
+
+#active  {
+  background-color: white;
+  margin-bottom: auto;
+  -webkit-transition: background-color .5s linear;
+  -moz-transition: background-color .5s linear;
+  -ms-transition: background-color .5s linear;
+  -o-transition: background-color .5s linear;
+  transition: background-color .5s linear;
+}
+
+.brand {
+  width: 270px;
+  font-family:'Roboto';
+  font-size: 300%;
+  color: $primary-text-color;
+  padding: 6px;
+  margin-left: 100px;
+
+  #inactive {
+    color: white;
+  }
+
+
+  #active {
+    color: black;
+  }
+}
