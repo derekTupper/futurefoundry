@@ -19,6 +19,18 @@ $primary-text-color:   #212121;
 $secondary-text-color: #727272;
 $divider-color:        #B6B6B6;
 
+//Project CSS Properties
+
+
+
+//Input Field CSS Class
+.foundry-input {
+  background: transparentize($primary-color-dark, .5);
+  border-width: 1.5px;
+  border-style: solid;
+  border-color: white;
+}
+
 
 @import './header/header_style';
 @import './home/home_style';

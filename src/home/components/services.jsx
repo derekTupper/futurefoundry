@@ -3,78 +3,35 @@ import React, { Component } from 'react';
 
 export default class Services extends Component  {
   render() {
+
+    var laptop = require('../../assets/img/home/webdevServices.png');
+    var product = require('../../assets/img/home/productdevServices.png');
+    var mobile = require('../../assets/img/home/mobiledevServices.png');
+    var hosting = require('../../assets/img/home/hostingServices.png');
+
     return(
       <div className='service_tiles'>
-        <WebServices />
-        <ProductConsulting />
+        <WebServices firstWord='Web' secondWord='Development' img={laptop}/>
+        <WebServices firstWord='Product' secondWord='Consulting' img={product}/>
         <Button />
-        <MobileDevelopment />
-        <HostingManagement />
+        <WebServices firstWord='Mobile' secondWord='Development' img={mobile}/>
+        <WebServices firstWord='Hosting' secondWord='Management' img={hosting}/>
       </div>
     );
   }
 }
 
-class WebServices extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {id: 'inactive'};
-    this.mouseOver = this.mouseOver.bind(this)
-    this.mouseOut = this.mouseOut.bind(this)
-  }
-
-  mouseOver() {
-      this.setState({id: 'active'});
-  }
-
-  mouseOut() {
-    this.setState({id: 'inactive'});
-  }
-
-
-  render() {
-    return(
-      <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} className="services_tile" id={this.state.id}>
-        <div>
-          <img id="image" src="src/assets/img/home/webdevServices.png"/>
-        </div>
-        <div>
-          <p id="text">Web <br/> Development</p>
-        </div>
+const WebServices = (props) => {
+  return(
+    <div className="services_tile highlight">
+      <div>
+        <img id="image" src={props.img}/>
       </div>
-    )
-  }
-}
-
-class ProductConsulting extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {id: 'inactive'};
-    this.mouseOver = this.mouseOver.bind(this)
-    this.mouseOut = this.mouseOut.bind(this)
-  }
-
-  mouseOver() {
-      this.setState({id: 'active'});
-  }
-
-  mouseOut() {
-    this.setState({id: 'inactive'});
-  }
-
-
-  render() {
-    return(
-      <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} className="services_tile" id={this.state.id}>
-        <div>
-          <img id="image" src="src/assets/img/home/productdevServices.png"/>
-        </div>
-        <div>
-          <p id="text">Product <br/> Consulting</p>
-        </div>
+      <div>
+        <p id="text">{props.firstWord} <br/> {props.secondWord}</p>
       </div>
-    )
-  }
+    </div>
+  );
 }
 
 class Button extends Component {
@@ -82,68 +39,6 @@ class Button extends Component {
     return(
       <div className="services_tile">
         <button id="servicesArrow" ><img src="src/assets/img/home/arrowButton.png"/></button>
-      </div>
-    )
-  }
-}
-
-class MobileDevelopment extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {id: 'inactive'};
-    this.mouseOver = this.mouseOver.bind(this)
-    this.mouseOut = this.mouseOut.bind(this)
-  }
-
-  mouseOver() {
-      this.setState({id: 'active'});
-  }
-
-  mouseOut() {
-    this.setState({id: 'inactive'});
-  }
-
-
-  render() {
-    return(
-      <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} className="services_tile" id={this.state.id}>
-        <div>
-          <img id="image" src="src/assets/img/home/mobiledevServices.png"/>
-        </div>
-        <div>
-          <p id="text"> Mobile <br/> Development</p>
-        </div>
-      </div>
-    )
-  }
-}
-
-class HostingManagement extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {id: 'inactive'};
-    this.mouseOver = this.mouseOver.bind(this)
-    this.mouseOut = this.mouseOut.bind(this)
-  }
-
-  mouseOver() {
-      this.setState({id: 'active'});
-  }
-
-  mouseOut() {
-    this.setState({id: 'inactive'});
-  }
-
-
-  render() {
-    return(
-      <div onMouseOver={this.mouseOver} onMouseOut={this.mouseOut} className="services_tile" id={this.state.id}>
-        <div>
-          <img id="image" src="src/assets/img/home/hostingServices.png"/>
-        </div>
-        <div>
-          <p id="text">Hosting <br/> Management</p>
-        </div>
       </div>
     )
   }

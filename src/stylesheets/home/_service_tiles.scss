@@ -8,15 +8,16 @@
 
 
   #inactive {
-    -webkit-transition: background-color .3s linear;
-    -moz-transition: background-color .3s linear;
-    -ms-transition: background-color .3s linear;
-    -o-transition: background-color .3s linear;
-    transition: background-color .3s linear;
+
   }
 
   #active {
     width: 240px;
+
+
+  }
+
+  .highlight:hover{
     background: rgba(255, 255, 255, .75);
     -webkit-transition: background .5s linear;
     -moz-transition: background  .5s linear;
@@ -25,8 +26,16 @@
     transition: background  .5s linear;
   }
 
+  .highlight{
+    -webkit-transition: background-color .3s linear;
+    -moz-transition: background-color .3s linear;
+    -ms-transition: background-color .3s linear;
+    -o-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
 
   .services_tile {
+
     height: 250px;
     width: 240px;
     margin: auto;
