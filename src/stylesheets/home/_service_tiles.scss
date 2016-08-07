@@ -4,18 +4,7 @@
   position: absolute;
   bottom: 0px;
   background-color: transparent;
-  display: inline-flex;
-
-
-  #inactive {
-
-  }
-
-  #active {
-    width: 240px;
-
-
-  }
+  display: flex;
 
   .highlight:hover{
     background: rgba(255, 255, 255, .75);

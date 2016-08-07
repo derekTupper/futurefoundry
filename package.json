@@ -1,6 +1,6 @@
 {
-  "name": "rd.website",
-  "version": "1.0.0",
+  "name": "futurefoundry.co",
+  "version": "0.1.0",
   "description": "marketing site for devshop",
   "main": "./app.js",
   "scripts": {
@@ -14,10 +14,14 @@
     "bootstrap-sass": "^3.3.6",
     "express": "^4.13.4",
     "jQuery": "^1.7.4",
+    "material-ui": "^0.15.3",
     "mongoose": "^4.5.0",
     "react": "^15.1.0",
-    "react-dom": "^15.1.0",
+    "react-dom": "^15.3.0",
+    "react-redux": "^4.4.5",
     "react-router": "^2.4.1",
+    "react-tap-event-plugin": "^1.0.0",
+    "redux": "^3.5.2",
     "waypoints": "^4.0.0",
     "webpack": "^1.13.1"
   },

@@ -1,0 +1,53 @@
+.splash-container {
+  margin-top: 200px;
+  width: auto;
+  height: auto;
+  display:inline-flex;
+
+
+//CSS for splash text
+  .contact-text {
+    h1 {
+      font-family: 'Roboto';
+      font-size: 300%;
+      color: $primary-text-color;
+      margin-left: 65px;
+      // text-shadow: 3px 3px 10px $primary-color-dark;
+      text-align: center;
+    }
+    p {
+      font-family: 'Roboto';
+      font-size: 300%;
+      color: $primary-text-color;
+      margin-left: 65px;
+      // text-shadow: 3px 3px 10px $primary-color-dark;
+      text-align: left;
+    }
+  }
+
+
+//CSS for Contact Form
+  .contact-form {
+    background-color: transparentize(#607D8B, .25);
+    margin: auto;
+    width: Auto;
+    max-width: 600px;
+    height: auto;
+    padding: 0px;
+    align-self: center;
+
+
+
+    p {
+      background-color: #EC407A;
+      font-family: 'Roboto';
+      font-size: 300%;
+      color: white;
+      text-align: center;
+      padding: 0px;
+    }
+
+
+
+  }
+}
