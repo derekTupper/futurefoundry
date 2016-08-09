@@ -1,11 +1,14 @@
 .home {
   background-image: url('#{$ImgAssetPath}/home/homeBackground2.jpg');
   background-size: auto;
+  border:none;
+  margin:none;
+  padding: none;
   max-width: 100%;
   min-height: 925px;
-  position: absolute;
+  overflow: auto;
 
-  @import 'splash';
+  @import 'contact';
   @import 'service_tiles';
 
 }

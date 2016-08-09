@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import TextField from 'material-ui/TextField';
 
+import ContactDialog from './contactDialog';
 
 export default class Contact extends Component  {
 
   render() {
     return(
-      <div className='splash-container'>
-          <Text />
-          <ContactForm />
+      <div className='contactContainer'>
+            <Text />
+            <ContactDialog />
       </div>
     );
   }
@@ -18,7 +19,7 @@ export default class Contact extends Component  {
 //Splash text displayed next to the contact form.
 const Text = () => {
   return(
-    <div className='col-lg-6 contact-text'>
+    <div className='contact-text'>
       <h1>Forge your Future with Us</h1>
       <p>
       We forge technology solutions that elevate your business
