@@ -1,0 +1,58 @@
+#inactive {
+  background-color: transparent;
+  margin-bottom: auto;
+  position: fixed;
+  -webkit-transition: background-color .25s linear;
+  -moz-transition: background-color .25s linear;
+  -ms-transition: background-color .25s linear;
+  -o-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+
+  .inside-nav {
+    border: 1px;
+    border-color: $pcolor-dark;
+  }
+
+},
+
+#active  {
+  background-color: transparentize($pcolor-dark, .25);
+  margin-bottom: auto;
+  -webkit-transition: background-color .25s linear;
+  -moz-transition: background-color .25s linear;
+  -ms-transition: background-color .25s linear;
+  -o-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+  }
+
+.inside-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+
+  .brand {
+    font-family: 'Muli';
+    font-weight: 100;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    margin-right: 300px;
+  }
+
+  ul.nav li a:hover {
+    background-color:transparent !important;
+    color: $tcolor-dark !important;
+  }
+
+  ul.nav li a {
+    margin-right: 30px;
+    font-family: 'Muli' ;
+    font-weight: lighter;
+    font-size: 115%;
+    color: white;
+  }
+
+}

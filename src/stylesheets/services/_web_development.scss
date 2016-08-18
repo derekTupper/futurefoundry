@@ -1,4 +1,71 @@
-.web_development {
-  height: 850px;
-  background-color: white;
+.webDevelopment {
+  height: 500px;
+
+  #webText {
+    margin-top: 75px;
+    padding-left: 40px;
+    text-align: center;
+    font-family: 'Muli';
+
+
+      #webTextMainTitle {
+        font-size: 300%;
+        text-align: left;
+      }
+
+      #webTextSubTitle {
+        font-size: 200%;
+      }
+
+      #webTextContent {
+        font-size: 175%;
+        text-align: left;
+        width: 400px;
+      }
+  }
+
+  #techTiles {
+    display: flex;
+    flex-flow: column wrap;
+
+    max-height: 500px;
+    align-items: center;
+    padding-top: 75px;
+
+    .thumbnail:hover {
+     background-color: transparentize($pcolor-dark , .25);
+     -webkit-transition: background-color .1s linear;
+     -moz-transition: background-color  .1s linear;
+     -ms-transition: background-color  .1s linear;
+     -o-transition: background-color  .1s linear;
+     transition: background-color  .1s linear;
+
+     h3 {
+       color: white;
+       font-weight: 600;
+       -webkit-transition: color font-weight .1s linear;
+       -moz-transition: color font-weight  .1s linear;
+       -ms-transition: color font-weight  .1s linear;
+       -o-transition: color font-weight  .1s linear;
+       transition: color font-weight  .1s linear;
+     }
+    }
+
+    .thumbnail {
+      background-color: white;
+      height: 150px;
+      width: 140px;
+      border-style: solid;
+
+      img {
+        align-self: center;
+      }
+
+      h3 {
+        margin-top: 5px;
+        text-align: center;
+        font-family: 'Muli';
+      }
+    }
+  }
 }

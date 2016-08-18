@@ -14,7 +14,7 @@ class ContactDialog extends Component {
   };
 
   handleOpen(){
-  this.setState({open: true});
+    this.setState({open: true});
   };
 
   handleClose(){
@@ -23,76 +23,98 @@ class ContactDialog extends Component {
 
   render() {
 
-    const actions = [
-      <FlatButton
-        label="Cancel"
-        primary={true}
-        onClick={this.handleClose}
-      />,
-      <FlatButton
-        label="Submit"
-        primary={true}
-        keyboardFocused={true}
-        onClick={this.handleClose}
-      />,
-    ];
+   const Button = (props) => {
+     return(
+       <button
+        type='button'
+        className={props.className}
+        id={props.id}
+        data-toggle={props.dataToggle}
+        data-target={props.dataTarget}
+      >
+        {props.label}
+      </button>
+    );
+  };
+
+  //  const Modal = (props) => {
+  //    return(
+  //     <div className='modal-fade' id='contactModal' tabindex='-1' role='dialog'>
+  //       <div className='modal-dialog' role='document'>
+  //         <div className='modal-content'>
+  //           <div className='modal-header'>
+   //
+  //           </div>
+  //         </div>
+  //       </div>
+  //     </div>
+  //    );
+  //  };
+
+
 
     const ContactInput = (props) => {
-      return(
-        <TextField
-          className='contactInput'
-          hintText={props.hint}
+      var input = <input
+        type="text"
+        id={props.id}
+        className='form-control'
+        placeholder={props.placeholder}
+      />;
 
-        />
-      );
+      if (props.addon) {
+        return(
+          <formGroup className='input-group'>
+            {input}
+            <span
+              className="input-group-addon"
+              type={props.addon}
+            >
+              {props.addon}
+            </span>
+          </formGroup>
+        );
+      } else {
+        return(
+          <div>
+            {input}
+          </div>
+        );
+      };
     };
 
-    const ContactButton = (props) => {
-      return(
-        <RaisedButton
-          className='ContactUsBtn'
-          label='Contact Us'
-          onClick={this.handleOpen}
-          style={{
-            fontSize: '175%',
-            fontFamily: 'Roboto'
-          }}
-        />
-      );
-    }
+
 
     return(
       <div>
-        <ContactButton />
-        <Dialog
-         title="Tell Us About your Project"
-         actions={actions}
-         modal={false}
-         open={this.state.open}
-         onRequestClose={this.handleClose}
-        >
-          <ContactInput className='contactInput' hint='Name' />
-          <ContactInput className='contactInput' hint='Email' />
-          <ContactInput className='contactInput' hint='Phone' />
-        </Dialog>
+        <Button label='Contact Us' className='btn btn-primary btn-lg' id='ContactUsBtn' dataToggle='modal' dataTarget='#contactModal'/>
+
+        <div className="modal fade" id="contactModal"  role="dialog" aria-labelledby="myModalLabel">
+          <div className="modal-dialog" role="document">
+            <div className="modal-content">
+              <div className="modal-header">
+                <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 className="modal-title" id="myModalLabel">Modal title</h4>
+              </div>
+              <div className="modal-body">
+                <ContactInput id='contactInput' placeholder='Name'  />
+                <ContactInput id='contactInput' placeholder='Email' addon='@example.com' />
+
+              </div>
+              <div className="modal-footer">
+                <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" className="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     );
   }
 }
 
 
-
-
-const DescriptionInput = (props) => {
-  return (
-    <TextField
-    className='contactDescription'
-      multiLine={true}
-      rows={5}
-
-    />
-  );
-}
 
 
 export default ContactDialog;

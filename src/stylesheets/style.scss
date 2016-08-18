@@ -3,19 +3,14 @@ $ImgAssetPath: '../assets/img';
 $MediaAssetPath: '../assets/media';
 
 font-family {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Muli', sans-serif;
   font-family: 'Roboto Condensed', sans-serif;
-
 }
 
-$primary-color-dark:   #455A64;
-$primary-color:        #607D8B;
-$primary-color-light:  #CFD8DC;
-$primary-color-text:   #FFFFFF;
-$accent-color:         #9E9E9E;
-$primary-text-color:   #212121;
-$secondary-text-color: #727272;
-$divider-color:        #B6B6B6;
+$pcolor-dark: #260126;
+$tcolor-dark: #D90368;
+
+
 
 //Comment element classes
 @import './elements/elements_style';
@@ -25,4 +20,3 @@ $divider-color:        #B6B6B6;
 @import './header/header_style';
 @import './home/home_style';
 @import './services/services_style';
-@import './counter/counter_style';

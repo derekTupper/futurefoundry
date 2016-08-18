@@ -1,0 +1,58 @@
+.navbar-fixed-top {
+  width: auto;
+  height: 75px;
+}
+#inactive {
+  background-color: transparent;
+  margin-bottom: auto;
+  border: 0;
+  position: fixed;
+  -webkit-transition: background-color .25s linear;
+  -moz-transition: background-color .25s linear;
+  -ms-transition: background-color .25s linear;
+  -o-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+
+  .brand {
+    color: white;
+    width: 270px;
+    font-family:'Roboto';
+    font-size: 300%;
+    padding: 6px;
+    margin-left: 100px;
+  }
+
+},
+
+#active  {
+  background-color: transparentize(white, .25);
+  margin-bottom: auto;
+  -webkit-transition: background-color .25s linear;
+  -moz-transition: background-color .25s linear;
+  -ms-transition: background-color .25s linear;
+  -o-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+
+  .brand {
+    width: 270px;
+    font-family:'Roboto';
+    font-size: 300%;
+    color: black;
+    padding: 6px;
+    margin-left: 100px;
+  }
+
+}
+
+.inside-nav {
+display: flex;
+align-items: center;
+justify-content: space-between;
+height:100%;
+}
+
+ul.nav li a {
+  font-family: Muli;
+  font-weight: lighter;
+
+}

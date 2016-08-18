@@ -3,7 +3,7 @@ import TextField from 'material-ui/TextField';
 
 import ContactDialog from './contactDialog';
 
-export default class Contact extends Component  {
+export default class Home extends Component  {
 
   render() {
     return(
@@ -21,10 +21,13 @@ const Text = () => {
   return(
     <div className='contact-text'>
       <h1>Forge your Future with Us</h1>
-      <p>
-      We forge technology solutions that elevate your business
-      to create unparalleled digital experiences for your customers and employees.
-      </p>
+      <div className='col-md-8 col-md-offset-2'>
+        <h2>
+        We forge technology solutions that elevate your business
+        to create unparalleled digital experiences for your customers and employees.
+        </h2>
+      </div>
+
     </div>
   );
 }
