@@ -1,5 +1,6 @@
 import React, { Component, ExecutionEnvironment }  from 'react';
 
+import contactDialog from '../../home/components/contactDialog';
 
 export default class Navbar extends Component {
   constructor() {
@@ -18,7 +19,7 @@ export default class Navbar extends Component {
 
 
   handleScroll() {
-    if( document.body.scrollTop > 0 ) {
+    if( document.body.scrollTop > 20 ) {
       this.setState({id: 'active'});
     } else {
       this.setState({id: 'inactive'});
@@ -26,8 +27,24 @@ export default class Navbar extends Component {
   }
 
   render() {
+
+    const Button = (props) => {
+      return(
+        <button
+         type='button'
+         className={props.className}
+         id={props.id}
+         data-toggle={props.dataToggle}
+         data-target={props.dataTarget}
+       >
+         {props.label}
+       </button>
+     );
+    }
+
+
     return(
-      <div className="main_header">
+      <div className="mainHeader">
         <nav onScroll={this.handleScroll} className='navbar-fixed-top item animated fadein' id={this.state.id}  >
          <div className='inside-nav'>
           <div className='navbar-header'>
@@ -39,6 +56,7 @@ export default class Navbar extends Component {
             <li><a href="#">Page 1</a></li>
             <li><a href="#">Page 2</a></li>
             <li><a href="#">Page 3</a></li>
+            <li><Button label='Contact Us' className='btn btn-primary btn-lg' id='ContactUsBtn' dataToggle='modal' dataTarget='#contactModal'/></li>
           </ul>
 
          </div>

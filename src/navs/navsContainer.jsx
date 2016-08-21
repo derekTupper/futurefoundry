@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 
 
-import HeaderNav from './components/headerNavbar';
-import Navbar from './components/navbar';
+import MainNav from './components/mainNav';
+import PageNav from './components/pageNav';
 
 
 export default class headerContainer extends Component {
   render(){
     return(
       <div className='header'>
-        <HeaderNav/>
-
+        <MainNav />
       </div>
 
     )

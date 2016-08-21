@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import './stylesheets/style.scss';
 
 //Import Site features refactored to Pods
-import Header from './header/headerContainer';
+import Navs from './navs/navsContainer';
 import Home from './home/homeContainer';
 import Services from './services/servicesContainer';
 
@@ -19,7 +19,7 @@ export default class App extends Component {
   render() {
     return (
         <div>
-          <Header />
+          <Navs />
           <Home />
           <Services />
         </div>

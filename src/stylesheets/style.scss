@@ -2,21 +2,31 @@
 $ImgAssetPath: '../assets/img';
 $MediaAssetPath: '../assets/media';
 
+header {
+  overflow-y: scroll;
+}
+
+body {
+  overflow-y: scroll;
+}
+
 font-family {
   font-family: 'Muli', sans-serif;
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+
 $pcolor-dark: #260126;
 $tcolor-dark: #D90368;
 
 
+$pfont: 'Muli';
 
 //Comment element classes
 @import './elements/elements_style';
 
 
 //Import of feature style sheets
-@import './header/header_style';
-@import './home/home_style';
-@import './services/services_style';
+@import './navs/nav';
+@import './home/home';
+@import './services/services';

@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 
 
 //Import components that compose the homeContainer components
-import WebDev from './components/web_development'
+import WebDev from './components/webDevelopment'
 import MobileDev from './components/mobile_development'
-import ProductConsult from './components/product_consulting'
+import ProductConsult from './components/productConsulting'
 import HostingManage from './components/hosting_management'
 
 

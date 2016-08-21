@@ -1,4 +1,18 @@
-.product_consulting {
-  height: 850px;
+.productConsulting {
+  height: 500px;
   background-image: url('#{$ImgAssetPath}/services/productBackground.jpg');
+
+  #productTitle {
+    text-align: center;
+    font-family: 'Muli';
+    font-size: 300%;
+    color: white;
+  }
+
+  .panel {
+    background-color: transparentize($pcolor-dark, .25);
+    border: 0;
+
+    align-self: center;
+  }
 }

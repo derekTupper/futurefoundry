@@ -37,57 +37,39 @@ class ContactDialog extends Component {
     );
   };
 
-  //  const Modal = (props) => {
-  //    return(
-  //     <div className='modal-fade' id='contactModal' tabindex='-1' role='dialog'>
-  //       <div className='modal-dialog' role='document'>
-  //         <div className='modal-content'>
-  //           <div className='modal-header'>
-   //
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //    );
-  //  };
+  const ContactInput = (props) => {
+    var input = <input
+      type="text"
+      id={props.id}
+      className='form-control'
+      placeholder={props.placeholder}
+    />;
 
-
-
-    const ContactInput = (props) => {
-      var input = <input
-        type="text"
-        id={props.id}
-        className='form-control'
-        placeholder={props.placeholder}
-      />;
-
-      if (props.addon) {
-        return(
-          <formGroup className='input-group'>
-            {input}
-            <span
-              className="input-group-addon"
-              type={props.addon}
-            >
-              {props.addon}
-            </span>
-          </formGroup>
-        );
-      } else {
-        return(
-          <div>
-            {input}
-          </div>
-        );
-      };
+    if (props.addon) {
+      return(
+        <formGroup className='input-group'>
+          {input}
+          <span
+            className="input-group-addon"
+            type={props.addon}
+          >
+            {props.addon}
+          </span>
+        </formGroup>
+      );
+    } else {
+      return(
+        <div>
+          {input}
+        </div>
+      );
     };
+  };
 
 
 
     return(
       <div>
-        <Button label='Contact Us' className='btn btn-primary btn-lg' id='ContactUsBtn' dataToggle='modal' dataTarget='#contactModal'/>
-
         <div className="modal fade" id="contactModal"  role="dialog" aria-labelledby="myModalLabel">
           <div className="modal-dialog" role="document">
             <div className="modal-content">
@@ -107,8 +89,6 @@ class ContactDialog extends Component {
             </div>
           </div>
         </div>
-
-
       </div>
     );
   }

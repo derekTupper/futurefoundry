@@ -1,5 +1,6 @@
 .home {
-  background-image: url('#{$ImgAssetPath}/home/homeBackground2.jpg');
+  // background-image: url('#{$ImgAssetPath}/home/homeBackground2.jpg');
+  background-color: $pcolor-dark;
   background-size: auto;
   border: 0;
   margin: 0;
@@ -8,7 +9,7 @@
   min-height: 925px;
   overflow: auto;
 
-  @import 'contact';
+  @import 'splashText';
   @import 'service_tiles';
 
 }

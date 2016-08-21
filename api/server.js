@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-app.all('/services/', function(req, res, next) {
+app.all('/api/', function(req, res, next) {
   res.send('HelloWorld!');
   next();
 });
