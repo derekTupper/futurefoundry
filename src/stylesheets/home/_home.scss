@@ -12,4 +12,27 @@
   @import 'splashText';
   @import 'service_tiles';
 
+  a {
+    padding-top: 150px;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    display: block;
+    opacity: .25;
+    font-family: $titlefont;
+    font-size: 150%;
+    color: white;
+  }
+
+  a:hover {
+    padding-top: 150px;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    display: block;
+    opacity: 1;
+    font-size: 150%;
+    color: white;
+  }
+
 }

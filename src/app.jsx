@@ -13,15 +13,16 @@ import './stylesheets/style.scss';
 import Navs from './navs/navsContainer';
 import Home from './home/homeContainer';
 import Services from './services/servicesContainer';
-
+import Footer from './footer/footerContainer';
 
 export default class App extends Component {
   render() {
     return (
-        <div>
+        <div data-spy="scroll">
           <Navs />
           <Home />
           <Services />
+          <Footer />
         </div>
     );
   }

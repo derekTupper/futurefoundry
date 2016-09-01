@@ -1,3 +1,7 @@
+
+//****************************************************************************
+//CSS for inactive and active states of the mainNavbar
+
 #inactive {
   background-color: transparent;
   margin-bottom: auto;
@@ -31,7 +35,7 @@
   -o-transition: background-color .25s linear;
   transition: background-color .25s linear;
 
-  .inside-nav{
+  .inside-nav {
     margin-top: 0px;
     padding-bottom: 0px;
     -webkit-transition:  .35s linear;
@@ -43,14 +47,22 @@
   }
 }
 
+//CSS for inactive and active states of the mainNavbar
+//****************************************************************************
+
+//Styling for mainNavbar and its elements
+
+
+//CSS for the whole Navbar element - ************************
 .inside-nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
 
 
-  .brand {
+//Styling for the Future Foundry brand text - ***************
+
+  .navbar-brand {
     font-family: 'Muli';
     font-weight: 100;
     color: white;
@@ -60,32 +72,44 @@
     margin-right: 300px;
   }
 
+//Nav element styling - *************************************
   ul.nav li a:hover {
     background-color:transparent !important;
     color: $tcolor-dark !important;
+    box-sizing: none;
+    text-decoration: none;
+    text-decoration-color: none;
+    text-decoration-style: none;
   }
 
   ul.nav li a {
-    margin-right: 30px;
     font-family: 'Muli' ;
     font-weight: lighter;
     font-size: 115%;
     color: white;
   }
 
+//ContactUSBtn styling - *************************************
   #ContactUsBtn:hover {
     background-color: white;
-    color: $pcolor-dark;
-    font-weight: bolder;
+    a {
+      text-align: center;
+      text-decoration: none;
+      color: $pcolor-dark;
+      font-weight: bolder;
+      text-decoration-color: none;
+      text-decoration-style: none;
+    }
   }
 
   #ContactUsBtn {
     font-family: 'Muli';
-    margin-top: 2px;
     background-color: transparent;
     border-radius: 0;
     border-width: 1px;
     border-color: white;
   }
+
+
 
 }

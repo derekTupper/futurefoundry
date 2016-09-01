@@ -26,6 +26,21 @@ export default class Navbar extends Component {
     }
   }
 
+  navigateToSection(event) {
+    event.preventDefault();
+
+    const href = event.target.href;
+    const elementID = href.substr(href.indexOf('#'));
+    const navHeight = $('.inside-nav').height();
+    console.log($(elementID).offset().top);
+    console.log($(elementID).offset().top - navHeight);
+
+    $('html, body').animate({
+        scrollTop: ($(elementID).offset().top - navHeight)
+      }, 800, function(){
+    });
+  }
+
   render() {
 
     const Button = (props) => {
@@ -36,32 +51,32 @@ export default class Navbar extends Component {
          id={props.id}
          data-toggle={props.dataToggle}
          data-target={props.dataTarget}
+         href={props.href}
        >
-         {props.label}
+         {props.children}
        </button>
      );
     }
 
 
     return(
-      <div className="mainHeader">
-        <nav onScroll={this.handleScroll} className='navbar-fixed-top item animated fadein' id={this.state.id}  >
-         <div className='inside-nav'>
-          <div className='navbar-header'>
-            {/*<a onScroll={this.handleScroll} className="navbar-brand" href="#">futurefoundry</a>*/}
-            <h1 onScroll={this.handleScroll}  className="brand" >futurefoundry</h1>
-          </div>
-          <ul className="nav navbar-nav pull-right">
-            <li className="active"><a href="#">Home</a></li>
-            <li><a href="#">Page 1</a></li>
-            <li><a href="#">Page 2</a></li>
-            <li><a href="#">Page 3</a></li>
-            <li><Button label='Contact Us' className='btn btn-primary btn-lg' id='ContactUsBtn' dataToggle='modal' dataTarget='#contactModal'/></li>
+      <nav onScroll={this.handleScroll} className='navbar-fixed-top navbar-default' id={this.state.id} >
+        <div className='navbar-header'>
+          <p className="navbar-brand">futurefoundry</p>
+          <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+            <span className="icon-bar"></span>
+          </button>
+        </div>
+        <div className="collapse navbar-collapse" id="myNavbar">
+          <ul className="nav navbar-nav navbar-right">
+            <li className="active"><a href="#home" onClick={this.navigateToSection}>Home</a></li>
+            <li><a href="#services" onClick={this.navigateToSection}>Services</a></li>
+            <li><Button className='btn btn-primary btn-md' id='ContactUsBtn'><a href='mailto:contact@futurefoundry.co'>Contact Us</a></Button></li>
           </ul>
-
-         </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
     );
   }
 }

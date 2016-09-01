@@ -9,7 +9,7 @@ import Home from './components/home'
 export default class homeContainer extends Component {
   render() {
     return (
-      <div className='home'>
+      <div id='home' className='home'>
         <Home />
         {/*<Services />*/}
       </div>

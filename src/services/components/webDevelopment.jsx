@@ -17,7 +17,7 @@ export default class WebDev extends Component  {
 
     const LangTiles = (props) => {
       return(
-        <div className="row">
+        <div id='development' className="row">
             <div className="thumbnail">
               <img src={props.img} />
               <div className="caption">
@@ -32,13 +32,13 @@ export default class WebDev extends Component  {
     return(
       <div className='webDevelopment col-lg-offset-1'>
         <div className='col-lg-5' id='webText'>
-          <h1 id='webTextMainTitle'>Web Development</h1>
+          <h1 id='webTextMainTitle'>Development</h1>
           <p id='webTextSubTitle'></p>
           <p id='webTextContent'>
-            Let us forge your future. Our solutions are built with the latest technologies. Here are some of our favorites.
+            We love bringing your ideas to life, whether it's on the web, desktop, mobile, or all three, using a variety of languages and platforms.
           </p>
 
-          {/*<a href='#'>Learn More</a>*/}
+          {/* <a href='#'>Learn More</a> */}
 
         </div>
 

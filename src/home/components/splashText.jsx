@@ -1,35 +1,26 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 
-export default class SplashText extends Component  {
-  render() {
+export default class SplashText extends Component {
+    render() {
+        var webDesktop = require('../../assets/img/home/rotateImg/rWebD.png');
+        var webTablet = require('../../assets/img/home/rotateImg/rWebT.png');
+        var webMobile = require('../../assets/img/home/rotateImg/rWebM.png');
+        var iphoneDesktop = require('../../assets/img/home/rotateImg/rIphoneD.png');
+        var imacDesktop = require('../../assets/img/home/rotateImg/riMacD.png');
+        var ipadDesktop = require('../../assets/img/home/rotateImg/riPadD.png');
 
-    // var laptop = require('../../assets/img/home/webdevServices.png');
-    // var product = require('../../assets/img/home/productdevServices.png');
-    // var mobile = require('../../assets/img/home/mobiledevServices.png');
-    var hosting = require('../../assets/img/home/hostingServices.png');
-
-
-
-    return(
-      <section className='rwpWrapper'>
-        <div className='rwpContent'>
-          <div className='rwpImgs rw-item-1'>
-            <img src={hosting}/>
-
-          </div>
-          <h1 className='rwpSentence'>
-          <span>We Build</span>
-          <div className='rwpWords rw-item-2'>
-            <span>Web Development</span>
-            <span>Web Development</span>
-            <span>Web Development</span>
-            <span>Web Development</span>
-          </div>
-          <span>.</span>
-          </h1>
-
-        </div>
-      </section>
-    );
-  }
+        return (
+            <div className='rwpWrapper'>
+                <h1 className='rwpSentence'>
+                    We forge your future.
+                </h1>
+                <div className='rwpImgs'>
+                    <span className='show-d hide-t hide-m'><img src={webDesktop}/></span>
+                    <span><img src={iphoneDesktop}/></span>
+                    <span><img src={imacDesktop}/></span>
+                    <span><img src={ipadDesktop}/></span>
+                </div>
+            </div>
+        );
+    }
 }

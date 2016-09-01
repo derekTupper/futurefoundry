@@ -11,11 +11,11 @@ import HostingManage from './components/hosting_management'
 export default class servicesContainer extends Component {
   render() {
     return (
-      <div className='services'>
+      <div id='services' className='services'>
         <WebDev />
         <ProductConsult />
-        <MobileDev />
-        <HostingManage />
+        {/* <MobileDev />
+        <HostingManage /> */}
       </div>
     );
   }
