@@ -1,0 +1,36 @@
+version: '2'
+services:
+  nginx:
+    build:
+      context: ./nginx
+      dockerfile: docker.nginx
+    image: my-nginx
+    container_name: my-nginx-container
+    ports:
+      - "8080:8080"
+    volumes:
+      - dist:/wwwroot/dist
+  node:
+    build:
+      context: ./node
+      dockerfile: docker.node
+    image: my-node
+    container_name: my-node-container
+    ports:
+      - "7777:7777"
+    volumes:
+      - ./node:/node
+  react:
+    build:
+      context: ./react
+      dockerfile: docker.react
+    image: my-react
+    container_name: my-react-container
+    ports:
+      - "35729:35729" # for live reload
+    volumes:
+      - dist:/react/dist
+      - ./react:/react
+
+volumes:
+  dist:

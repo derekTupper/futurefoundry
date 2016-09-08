@@ -1,0 +1,60 @@
+.service_tiles {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: 0px;
+  background-color: transparent;
+  display: flex;
+
+  .highlight:hover{
+    background: rgba(255, 255, 255, .75);
+    -webkit-transition: background .5s linear;
+    -moz-transition: background  .5s linear;
+    -ms-transition: background  .5s linear;
+    -o-transition: background  .5s linear;
+    transition: background  .5s linear;
+  }
+
+  .highlight{
+    -webkit-transition: background-color .3s linear;
+    -moz-transition: background-color .3s linear;
+    -ms-transition: background-color .3s linear;
+    -o-transition: background-color .3s linear;
+    transition: background-color .3s linear;
+  }
+
+  .services_tile {
+
+    height: 250px;
+    width: 240px;
+    margin: auto;
+
+    #servicesArrow {
+      display: block;
+      background: transparent;
+      border: none;
+      margin:auto;
+      margin-top: 60px;
+    }
+
+
+    #image {
+      display: block;
+      margin: auto;
+      margin-top: 20px;
+      height: 120px;
+    }
+
+    #text {
+      width: 100%;
+      height: 120px;
+      font-family: 'Roboto';
+      font-size: 200%;
+      padding-top: 15px;
+      color: black;
+      text-align: center;
+      // text-shadow: 1.2px 1.2px 5px black;
+
+    }
+  }
+}

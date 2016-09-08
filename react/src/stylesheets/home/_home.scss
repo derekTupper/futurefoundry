@@ -1,0 +1,38 @@
+.home {
+  // background-image: url('#{$ImgAssetPath}/home/homeBackground2.jpg');
+  background-color: $pcolor-dark;
+  background-size: auto;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  min-height: 925px;
+  overflow: auto;
+
+  @import 'splashText';
+  @import 'service_tiles';
+
+  a {
+    padding-top: 150px;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    display: block;
+    opacity: .25;
+    font-family: $titlefont;
+    font-size: 150%;
+    color: white;
+  }
+
+  a:hover {
+    padding-top: 150px;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+    display: block;
+    opacity: 1;
+    font-size: 150%;
+    color: white;
+  }
+
+}

@@ -1,0 +1,9 @@
+.services {
+  height: auto;
+  width: 100%;
+
+  @import 'hosting_management';
+  @import 'web_development';
+  @import 'product_consulting';
+  @import 'mobile_development';
+}
