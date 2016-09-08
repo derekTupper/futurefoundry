@@ -1,0 +1,10 @@
+# docker.nginx
+
+FROM nginx
+
+RUN apt-get update
+RUN apt-get install -qq -y build-essential zsh git-core lsof vim --fix-missing --no-install-recommends
+
+COPY /wwwroot /wwwroot
+COPY nginx.conf /etc/nginx/nginx.conf
+RUN service nginx start
