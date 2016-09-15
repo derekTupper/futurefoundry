@@ -13,25 +13,25 @@ export default class WebDev extends Component  {
     var rails = require('../../assets/img/services/technologies/rails.png');
     var angularjs = require('../../assets/img/services/technologies/angularjs.png');
     var sqldb = require('../../assets/img/services/technologies/sqldb.png');
+    var ios = require('../../assets/img/services/technologies/ios.png');
+    var android = require('../../assets/img/services/technologies/android.png');
 
 
     const LangTiles = (props) => {
       return(
-        <div id='development' className="row">
-            <div className="thumbnail">
-              <img src={props.img} />
-              <div className="caption">
-                <h3>{props.label}</h3>
-              </div>
-          </div>
+        <div className="thumbnail">
+          <img src={props.img} />
+          {/* <div className="caption">
+            <h3>{props.label}</h3>
+          </div> */}
         </div>
       );
     }
 
 
     return(
-      <div className='webDevelopment col-lg-offset-1'>
-        <div className='col-lg-5' id='webText'>
+      <div className='webDevelopment'>
+        <div className='col-sm-12 col-md-6 col-lg-5 col-lg-offset-1' id='webText'>
           <h1 id='webTextMainTitle'>Development</h1>
           <p id='webTextSubTitle'></p>
           <p id='webTextContent'>
@@ -42,15 +42,18 @@ export default class WebDev extends Component  {
 
         </div>
 
-        <div className='col-lg-5' id='techTiles'>
-        <LangTiles img={reactjs} label='React JS'/>
-        <LangTiles img={java} label='Java'/>
-        <LangTiles img={javascript} label='Javascript'/>
-        <LangTiles img={mongodb} label='MongoDB'/>
-        <LangTiles img={nodejs} label='Node JS'/>
-        <LangTiles img={rails} label='Rails'/>
-        <LangTiles img={angularjs} label='Angular JS'/>
-        <LangTiles img={sqldb} label='SQL'/>
+        <div className='col-sm-12 col-md-6 col-lg-5' id='techTiles'>
+          <LangTiles img={reactjs} label='React'/>
+          <LangTiles img={angularjs} label='Angular'/>
+          {/* <LangTiles img={java} label='Java'/> */}
+          {/* <LangTiles img={javascript} label='Javascript'/> */}
+
+          <LangTiles img={nodejs} label='Node'/>
+          <LangTiles img={rails} label='Rails'/>
+          <LangTiles img={ios} label='iOS'/>
+          <LangTiles img={android} label='Android'/>
+          <LangTiles img={mongodb} label='MongoDB'/>
+          <LangTiles img={sqldb} label='SQL'/>
         </div>
       </div>
     );

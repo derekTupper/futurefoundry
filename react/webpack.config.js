@@ -4,6 +4,7 @@ var path = require('path');
 var projectRootPath = path.resolve(__dirname, './');
 var assetsPath = path.resolve(projectRootPath, './dist');
 
+console.log(path.resolve(projectRootPath, '../install/node_modules'));
 
 module.exports = {
   devtool: 'source-map',
@@ -31,7 +32,15 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js', '.jsx','scss']
+    extensions: ['', '.js', '.jsx','scss'],
+    root: [
+      path.join(__dirname, '../install/node_modules')
+    ]
+  },
+  resolveLoader: {
+    modulesDirectories: [
+      '../install/node_modules'
+    ]
   },
 
   devServer: {

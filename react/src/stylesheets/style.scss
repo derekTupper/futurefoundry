@@ -48,10 +48,10 @@ body {
   overflow-y: scroll;
 }
 
-font-family {
-  font-family: 'Muli';
-  font-family: 'Oxygen';
-}
+// font-family {
+  // font-family: 'Muli';
+  // font-family: 'Oxygen';
+// }
 
 
 $pcolor-dark: #5D7B93;
@@ -60,6 +60,13 @@ $tcolor-dark: #D90368;
 
 $titlefont: 'Muli';
 $contentfont: 'Oxygen';
+
+h1, h2, h3, h4, h5, p, a {
+  font-family: 'Roboto';
+}
+p{
+
+}
 
 //Comment element classes
 @import './elements/elements_style';

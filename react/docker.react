@@ -8,8 +8,9 @@ RUN git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh \
       && cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc \
       && chsh -s /bin/zsh
 
-ENV INSTALL_PATH /react
+ENV INSTALL_PATH /install
 RUN mkdir -p $INSTALL_PATH
+RUN mkdir -p react
 
 WORKDIR $INSTALL_PATH
 
@@ -18,10 +19,12 @@ RUN npm install webpack -g
 COPY package.json package.json
 RUN npm install
 
+WORKDIR /react
+
 COPY . .
 
 EXPOSE 8080
 
 # CMD ECHO "Hello world"
 
-CMD webpack --watch --watch-polling --config webpack.config.js
+CMD ls && webpack --watch --watch-polling --config webpack.config.js
