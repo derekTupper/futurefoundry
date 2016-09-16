@@ -16,6 +16,8 @@ services:
       dockerfile: docker.node
     image: my-node
     container_name: my-node-container
+    environment:
+      - NODE_PATH=/install/node_modules
     ports:
       - "7777:7777"
     volumes:
@@ -26,6 +28,8 @@ services:
       dockerfile: docker.react
     image: my-react
     container_name: my-react-container
+    environment:
+      - NODE_PATH=/install/node_modules
     ports:
       - "35729:35729" # for live reload
     volumes:
