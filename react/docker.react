@@ -27,4 +27,4 @@ EXPOSE 8080
 
 # CMD ECHO "Hello world"
 
-CMD ls && webpack --watch --watch-polling --config webpack.config.js
+CMD webpack --watch --watch-polling --config webpack.config.js
