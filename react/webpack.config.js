@@ -9,7 +9,7 @@ console.log(path.resolve(projectRootPath, '../install/node_modules'));
 module.exports = {
   devtool: 'source-map',
   entry: [
-    './src/app.jsx'
+    './src/app.js'
   ],
   output: {
     path: assetsPath,

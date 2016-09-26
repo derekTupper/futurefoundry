@@ -10,7 +10,7 @@ import 'bootstrap/dist/js/bootstrap.js';
 import './stylesheets/style.scss';
 
 //Import Site features refactored to Pods
-import Navs from './navs/navsContainer';
+import Navs from './nav';
 import Home from './home/homeContainer';
 import Services from './services/servicesContainer';
 import Footer from './footer/footerContainer';

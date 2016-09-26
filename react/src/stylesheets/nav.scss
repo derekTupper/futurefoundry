@@ -1,0 +1,170 @@
+//Variables for NAV//
+
+$nav-num-element: 5;
+$nav-content-width: 80%;
+$nav-content-padding: 10%;
+
+
+nav.main {
+  height: 60px;
+  position: fixed;
+  top: 0px;
+  width: $full-width;
+
+
+
+  .content {
+    display: block;
+    width: $nav-content-width;
+    padding-left: $nav-content-padding;
+    padding-right: $nav-content-padding;
+  }
+  .menu-foundry {
+    width: ($nav-content-width / $nav-num-element);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin: 0;
+  }
+
+  .menu-wrapper {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+
+      li {
+        display: inline;
+        width: ($nav-content-width / $nav-num-element);
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+//****************************************************************************
+//CSS for inactive and active states of the mainNavbar
+
+// #inactive {
+//   background-color: transparent;
+//   margin-bottom: auto;
+//   position: fixed;
+//   -webkit-transition: background-color .25s linear;
+//   -moz-transition: background-color .25s linear;
+//   -ms-transition: background-color .25s linear;
+//   -o-transition: background-color .25s linear;
+//   transition: background-color .25s linear;
+//
+//   .inside-nav {
+//     margin-top: 50px;
+//     padding-bottom: 30px;
+//     margin-top: 50px;
+//     padding-bottom: 30px;
+//     -webkit-transition:  .35s linear;
+//     -moz-transition:  .35s linear;
+//     -ms-transition:  .35s linear;
+//     -o-transition:  .35s linear;
+//     transition:  .35s linear;
+//   }
+//
+// },
+//
+// #active  {
+//   background-color: transparentize(white, .25);
+//   margin-bottom: auto;
+//   -webkit-transition: background-color .25s linear;
+//   -moz-transition: background-color .25s linear;
+//   -ms-transition: background-color .25s linear;
+//   -o-transition: background-color .25s linear;
+//   transition: background-color .25s linear;
+//
+//   .inside-nav {
+//     margin-top: 0px;
+//     padding-bottom: 0px;
+//     -webkit-transition:  .35s linear;
+//     -moz-transition:  .35s linear;
+//     -ms-transition:  .35s linear;
+//     -o-transition:  .35s linear;
+//     transition:  .35s linear;
+//
+//   }
+// }
+//
+// //CSS for inactive and active states of the mainNavbar
+// //****************************************************************************
+//
+// //Styling for mainNavbar and its elements
+//
+//
+// //CSS for the whole Navbar element - ************************
+// .inside-nav {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//
+//
+// //Styling for the Future Foundry brand text - ***************
+//
+//   .navbar-brand {
+//     // font-family: 'Muli';
+//     font-weight: 100;
+//     color: white;
+//     margin-top: auto;
+//     margin-bottom: auto;
+//     margin-left: 10px;
+//     margin-right: 300px;
+//   }
+//
+// //Nav element styling - *************************************
+//   // ul.nav li a:hover {
+//   //   background-color:transparent !important;
+//   //   color: $tcolor-dark !important;
+//   //   box-sizing: none;
+//   //   text-decoration: none;
+//   //   text-decoration-color: none;
+//   //   text-decoration-style: none;
+//   // }
+//
+//   ul.nav li a {
+//     // font-family: 'Muli' ;
+//     font-weight: lighter;
+//     font-size: 115%;
+//     color: white;
+//   }
+//
+// //ContactUSBtn styling - *************************************
+//   #ContactUsBtn:hover {
+//     background-color: white;
+//     a {
+//       text-align: center;
+//       text-decoration: none;
+//       color: $pcolor-dark;
+//       font-weight: bolder;
+//       text-decoration-color: none;
+//       text-decoration-style: none;
+//     }
+//   }
+//
+//   #ContactUsBtn {
+//     // font-family: 'Muli';
+//     background-color: transparent;
+//     border-radius: 0;
+//     border-width: 1px;
+//     border-color: white;
+//   }
+//
+//
+//
+// }

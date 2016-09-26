@@ -2,6 +2,9 @@
 $ImgAssetPath: '../assets/img';
 $MediaAssetPath: '../assets/media';
 
+//Scale//
+$full-width: 100%;
+
 
 //*Mobile*//
 @media(min-width:768px) and (max-width:991px){
@@ -88,7 +91,7 @@ p{
 
 
 //Import of feature style sheets
-@import './navs/nav';
+@import './nav';
 @import './home/home';
 @import './services/services';
 @import './footer/footer';
