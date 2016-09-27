@@ -9,6 +9,7 @@ export default class Navbar extends Component {
   constructor() {
     super();
     this.state = {
+      className: 'main is-transparent',
       location: '1'
     };
     this.handleScroll = this.handleScroll.bind(this);
@@ -26,9 +27,9 @@ export default class Navbar extends Component {
 
   handleScroll() {
     if( document.body.scrollTop > 20 ) {
-      this.setState({class: 'main'});
+      this.setState({className: 'main is-transparent is-filled-white'});
     } else {
-      this.setState({scroll: 'main is-transparent'});
+      this.setState({className: 'main is-transparent'});
     }
   }
 
@@ -51,32 +52,33 @@ export default class Navbar extends Component {
   }
 
   render() {
-
-    const navClass = classNames ({
-      'main': true,
-      "main is-transparent": this.state.handleScroll
-    });
-
     return(
       <div id='header' className='header'>
-        <nav onScroll={this.handleScroll} id='nav' className={navClass} role='primary'>
+        <nav onScroll={this.handleScroll} id='nav' className={this.state.className} role='primary'>
           <div className='content'>
-            <div className='menu-foundry'>
-              <a href='#/home'><img src={foundryCogLg} /></a>
+            <div className='menu-cog'>
+              <div className='logo-wrap' >
+                <a href='/' className='logo-link'>
+                  <img className='foundry-logo' src={foundryCogLg} />
+                </a>
+              </div>
             </div>
             <div className='menu-wrapper'>
               <ul className='menu'>
                 <li className='menu-item'>
-                  <a href='#/work'>Work</a>
+                  <a href='/work' className='menu-link'>Services</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='#/work'>About</a>
+                  <a href='/work' className='menu-link'>Work</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='#/work'>Blog</a>
+                  <a href='#/work' className='menu-link'>About</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='#/work'>Contact</a>
+                  <a href='#/work' className='menu-link'>Blog</a>
+                </li>
+                <li className='menu-item'>
+                  <a href='#/work' className='menu-link'>Contact</a>
                 </li>
               </ul>
             </div>

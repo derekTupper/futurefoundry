@@ -1,49 +1,114 @@
 //Variables for NAV//
 
 $nav-num-element: 5;
-$nav-content-width: 80%;
-$nav-content-padding: 10%;
-
+$menu-item-width: 80%;
 
 nav.main {
   height: 60px;
   position: fixed;
   top: 0px;
   width: $full-width;
-
+  z-index: 10;
+  display: block;
+  vertical-align: baseline;
 
 
   .content {
     display: block;
-    width: $nav-content-width;
-    padding-left: $nav-content-padding;
-    padding-right: $nav-content-padding;
+    float: left;
+    width: $full-width;
+    padding-left: 10%;
+    padding-right: 5%;
   }
-  .menu-foundry {
-    width: ($nav-content-width / $nav-num-element);
+
+
+
+  .menu-cog {
+    display: inline-block;
+    width: ($menu-item-width / $nav-num-element/ 2);
+    float: left;
+    position: relative;
     padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0;
+    padding-right: 30px;
+
+    img {
+      height: 40px;
+      width: 40px;
+      vertical-align: baseline;
+    }
+
   }
+
 
   .menu-wrapper {
-    ul {
+    vertical-align: baseline;
+
+
+    .menu {
+      position: inline-block;
       list-style-type: none;
+      vertical-align: baseline;
       margin: 0;
       padding: 0;
-      overflow: hidden;
+      text-align: center;
 
-      li {
-        display: inline;
-        width: ($nav-content-width / $nav-num-element);
+      .menu-item {
+        float: left;
+        height: 60px;
+        width: ($menu-item-width / $nav-num-element);
+        vertical-align: baseline;
       }
     }
   }
 
+  .menu-link {
+    display: block;
+    padding-top: 21.5px;
+    padding-right: 24px;
+    padding-bottom: 21.5px;
+    padding-left: 24px;
+    font-family: $titlefont;
+    font-weight: 500;
+    font-size: 12.1px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+
+
+  .menu-link:hover {
+    background-color: black;
+    color: white;
+    -webkit-transition: background-color .50s linear;
+    -moz-transition: background-color .50s linear;
+    -ms-transition: background-color .50s linear;
+    -o-transition: background-color .50s linear;
+    transition: background-color .50s linear;
+  }
 }
 
+
+.is-transparent {
+  background-color: transparent;
+  -webkit-transition: background-color .25s linear;
+  -moz-transition: background-color .25s linear;
+  -ms-transition: background-color .25s linear;
+  -o-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+}
+
+
+
+.is-filled-white {
+
+  background-color: transparentize(white, .10);
+  -webkit-transition: background-color .25s linear;
+  -moz-transition: background-color .25s linear;
+  -ms-transition: background-color .25s linear;
+  -o-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+}
 
 
 
