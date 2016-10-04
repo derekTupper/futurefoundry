@@ -6,42 +6,6 @@ $MediaAssetPath: '../assets/media';
 $full-width: 100%;
 
 
-//*Mobile*//
-@media(min-width:768px) and (max-width:991px){
-  .show-m {
-    display:inline-flex;
-  }
-  .hide-m {
-    display: none;
-  }
-}
-
-//*Tablet*//
-@media(min-width:992px) and (max-width:1199px){
-  .show-t {
-    display:inline-flex;
-  }
-  .hide-t {
-    display: none;
-  }
-}
-
-//*Desktop*//
-@media(min-width:1200px){
-  .show-d {
-    display:inline-flex;
-  }
-  .hide-d {
-    display: none;
-  }
-}
-
-
-
-
-
-
-
 
 header {
   overflow-y: scroll;
@@ -51,10 +15,7 @@ body {
   overflow-y: scroll;
 }
 
-// font-family {
-  // font-family: 'Muli';
-  // font-family: 'Oxygen';
-// }
+
 
 
 $pcolor-dark: #5D7B93;
@@ -86,12 +47,10 @@ p{
 
 }
 
-//Comment element classes
-@import './elements/elements_style';
 
 
 //Import of feature style sheets
 @import './nav';
-@import './home/home';
-@import './services/services';
-@import './footer/footer';
+@import './components/home';
+@import './components/development';
+@import './footer';

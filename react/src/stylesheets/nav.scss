@@ -3,6 +3,16 @@
 $nav-num-element: 5;
 $menu-item-width: 80%;
 
+@media screen and (max-width: 715px) {
+  .nav.main {
+    visibility: hidden;
+  }
+
+  .menu-wrapper {
+    visibility: hidden;
+  }
+}
+
 nav.main {
   height: 60px;
   position: fixed;
@@ -39,7 +49,6 @@ nav.main {
 
   }
 
-
   .menu-wrapper {
     vertical-align: baseline;
 
@@ -55,6 +64,8 @@ nav.main {
       .menu-item {
         float: left;
         height: 60px;
+        font-style: $titlefont;
+        font-weight: lighter;
         width: ($menu-item-width / $nav-num-element);
         vertical-align: baseline;
       }
@@ -86,6 +97,47 @@ nav.main {
     -o-transition: background-color .50s linear;
     transition: background-color .50s linear;
   }
+
+  .button-wrapper  {
+    cursor: pointer;
+
+  }
+
+  @media screen and (max-width: 715px) {
+    visibility: visible;
+
+    .button-wrapper {
+      display: block;
+      margin-top: 14px;
+      margin-right: 15px;
+      margin-bottom: 14px;
+      margin-left: 15px;
+      padding: 10px;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      .l-1 {
+        background: white;
+        height: 3px;
+        margin-bottom: 7px;
+        width: 25px;
+      }
+
+      .l-2 {
+        background: white;
+        height: 3px;
+        width: 25px;
+      }
+    }
+
+    .menu-open {
+
+    }
+
+
+  }
 }
 
 
@@ -101,135 +153,21 @@ nav.main {
 
 
 .is-filled-white {
-
   background-color: transparentize(white, .10);
   -webkit-transition: background-color .25s linear;
   -moz-transition: background-color .25s linear;
   -ms-transition: background-color .25s linear;
   -o-transition: background-color .25s linear;
   transition: background-color .25s linear;
+
+  .l-1 .l-2 {
+    background: black;
+    -webkit-transition: background .25s linear;
+    -moz-transition: background .25s linear;
+    -ms-transition: background .25s linear;
+    -o-transition: background .25s linear;
+    transition: background .25s linear;
+  }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-//****************************************************************************
-//CSS for inactive and active states of the mainNavbar
-
-// #inactive {
-//   background-color: transparent;
-//   margin-bottom: auto;
-//   position: fixed;
-//   -webkit-transition: background-color .25s linear;
-//   -moz-transition: background-color .25s linear;
-//   -ms-transition: background-color .25s linear;
-//   -o-transition: background-color .25s linear;
-//   transition: background-color .25s linear;
-//
-//   .inside-nav {
-//     margin-top: 50px;
-//     padding-bottom: 30px;
-//     margin-top: 50px;
-//     padding-bottom: 30px;
-//     -webkit-transition:  .35s linear;
-//     -moz-transition:  .35s linear;
-//     -ms-transition:  .35s linear;
-//     -o-transition:  .35s linear;
-//     transition:  .35s linear;
-//   }
-//
-// },
-//
-// #active  {
-//   background-color: transparentize(white, .25);
-//   margin-bottom: auto;
-//   -webkit-transition: background-color .25s linear;
-//   -moz-transition: background-color .25s linear;
-//   -ms-transition: background-color .25s linear;
-//   -o-transition: background-color .25s linear;
-//   transition: background-color .25s linear;
-//
-//   .inside-nav {
-//     margin-top: 0px;
-//     padding-bottom: 0px;
-//     -webkit-transition:  .35s linear;
-//     -moz-transition:  .35s linear;
-//     -ms-transition:  .35s linear;
-//     -o-transition:  .35s linear;
-//     transition:  .35s linear;
-//
-//   }
-// }
-//
-// //CSS for inactive and active states of the mainNavbar
-// //****************************************************************************
-//
-// //Styling for mainNavbar and its elements
-//
-//
-// //CSS for the whole Navbar element - ************************
-// .inside-nav {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//
-//
-// //Styling for the Future Foundry brand text - ***************
-//
-//   .navbar-brand {
-//     // font-family: 'Muli';
-//     font-weight: 100;
-//     color: white;
-//     margin-top: auto;
-//     margin-bottom: auto;
-//     margin-left: 10px;
-//     margin-right: 300px;
-//   }
-//
-// //Nav element styling - *************************************
-//   // ul.nav li a:hover {
-//   //   background-color:transparent !important;
-//   //   color: $tcolor-dark !important;
-//   //   box-sizing: none;
-//   //   text-decoration: none;
-//   //   text-decoration-color: none;
-//   //   text-decoration-style: none;
-//   // }
-//
-//   ul.nav li a {
-//     // font-family: 'Muli' ;
-//     font-weight: lighter;
-//     font-size: 115%;
-//     color: white;
-//   }
-//
-// //ContactUSBtn styling - *************************************
-//   #ContactUsBtn:hover {
-//     background-color: white;
-//     a {
-//       text-align: center;
-//       text-decoration: none;
-//       color: $pcolor-dark;
-//       font-weight: bolder;
-//       text-decoration-color: none;
-//       text-decoration-style: none;
-//     }
-//   }
-//
-//   #ContactUsBtn {
-//     // font-family: 'Muli';
-//     background-color: transparent;
-//     border-radius: 0;
-//     border-width: 1px;
-//     border-color: white;
-//   }
-//
-//
-//
-// }

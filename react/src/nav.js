@@ -10,10 +10,12 @@ export default class Navbar extends Component {
     super();
     this.state = {
       className: 'main is-transparent',
-      location: '1'
+      location: '1',
+      buttonClassName: 'button-wrapper'
     };
     this.handleScroll = this.handleScroll.bind(this);
     this.navigateToSection = this.navigateToSection.bind(this);
+    this.handleNavClick = this.handleNavClick.bind(this);
   }
 
   componentDidMount() {
@@ -22,6 +24,10 @@ export default class Navbar extends Component {
 
   componentWillUnmount() {
       window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleNavClick() {
+    this.setState({buttonClassName: 'button-wrapper menu-open'})
   }
 
 
@@ -52,6 +58,17 @@ export default class Navbar extends Component {
   }
 
   render() {
+
+    // var navClass = navClass ({
+    //   'main': true,
+    //   'is-transparent': true,
+    //   'is-filled-white': this.state.self
+    //   // 'menu-open':
+    //
+    // });
+
+
+
     return(
       <div id='header' className='header'>
         <nav onScroll={this.handleScroll} id='nav' className={this.state.className} role='primary'>
@@ -81,6 +98,10 @@ export default class Navbar extends Component {
                   <a href='#/work' className='menu-link'>Contact</a>
                 </li>
               </ul>
+            </div>
+            <div onClick={this.handleNavClick} className={this.state.buttonClassName}>
+              <div className='l-1'></div>
+              <div className='l-2'></div>
             </div>
           </div>
         </nav>

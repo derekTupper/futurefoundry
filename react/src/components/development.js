@@ -5,16 +5,16 @@ import React, { Component } from 'react';
 export default class WebDev extends Component  {
   render() {
 
-    var reactjs = require('../../assets/img/services/technologies/reactjs.png');
-    var java = require('../../assets/img/services/technologies/java.png');
-    var javascript = require('../../assets/img/services/technologies/js.png');
-    var mongodb = require('../../assets/img/services/technologies/mongodb.png');
-    var nodejs = require('../../assets/img/services/technologies/nodejs.png');
-    var rails = require('../../assets/img/services/technologies/rails.png');
-    var angularjs = require('../../assets/img/services/technologies/angularjs.png');
-    var sqldb = require('../../assets/img/services/technologies/sqldb.png');
-    var ios = require('../../assets/img/services/technologies/ios.png');
-    var android = require('../../assets/img/services/technologies/android.png');
+    var reactjs = require('../assets/img/services/technologies/reactjs.png');
+    var java = require('../assets/img/services/technologies/java.png');
+    var javascript = require('../assets/img/services/technologies/js.png');
+    var mongodb = require('../assets/img/services/technologies/mongodb.png');
+    var nodejs = require('../assets/img/services/technologies/nodejs.png');
+    var rails = require('../assets/img/services/technologies/rails.png');
+    var angularjs = require('../assets/img/services/technologies/angularjs.png');
+    var sqldb = require('../assets/img/services/technologies/sqldb.png');
+    var ios = require('../assets/img/services/technologies/ios.png');
+    var android = require('../assets/img/services/technologies/android.png');
 
 
     const LangTiles = (props) => {

@@ -10,18 +10,18 @@ import 'bootstrap/dist/js/bootstrap.js';
 import './stylesheets/style.scss';
 
 //Import Site features refactored to Pods
-import Navs from './nav';
-import Home from './home/homeContainer';
-import Services from './services/servicesContainer';
-import Footer from './footer/footerContainer';
+import Nav from './nav';
+import Home from './components/home';
+import Dev from './components/development';
+import Footer from './footer';
 
 export default class App extends Component {
   render() {
     return (
         <div data-spy="scroll">
-          <Navs />
+          <Nav />
           <Home />
-          <Services />
+          <Dev />
           <Footer />
         </div>
     );
