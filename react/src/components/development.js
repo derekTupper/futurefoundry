@@ -30,8 +30,8 @@ export default class WebDev extends Component  {
 
 
     return(
-      <div className='webDevelopment'>
-        <div className='col-sm-12 col-md-6 col-lg-5 col-lg-offset-1' id='webText'>
+      <div className='webDevelopment container'>
+        <div className='col-xs-12 col-sm-12 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-5 col-lg-offset-1' id='webText'>
           <h1 id='webTextMainTitle'>Development</h1>
           <p id='webTextSubTitle'></p>
           <p id='webTextContent'>
@@ -42,7 +42,7 @@ export default class WebDev extends Component  {
 
         </div>
 
-        <div className='col-sm-12 col-md-6 col-lg-5' id='techTiles'>
+        <div className='col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-5' id='techTiles'>
           <LangTiles img={reactjs} label='React'/>
           <LangTiles img={angularjs} label='Angular'/>
           {/* <LangTiles img={java} label='Java'/> */}
