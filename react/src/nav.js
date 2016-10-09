@@ -9,34 +9,37 @@ export default class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      className: 'main is-transparent',
-      location: '1',
-      buttonClassName: 'button-wrapper'
+      menuOpen: false,
+      navScrolled: false,
     };
-    this.handleScroll = this.handleScroll.bind(this);
+    this.handleNavScroll = this.handleNavScroll.bind(this);
     this.navigateToSection = this.navigateToSection.bind(this);
     this.handleNavClick = this.handleNavClick.bind(this);
   }
 
   componentDidMount() {
-      window.addEventListener('scroll', this.handleScroll);
+      window.addEventListener('scroll', this.handleNavScroll);
   }
 
   componentWillUnmount() {
-      window.removeEventListener('scroll', this.handleScroll);
+      window.removeEventListener('scroll', this.handleNavScroll);
   }
 
   handleNavClick() {
-    this.setState({buttonClassName: 'button-wrapper menu-open'})
+
+    this.setState({
+      menuOpen: !this.state.menuOpen
+    });
+
   }
 
 
-  handleScroll() {
-    if( document.body.scrollTop > 20 ) {
-      this.setState({className: 'main is-transparent is-filled-white'});
-    } else {
-      this.setState({className: 'main is-transparent'});
-    }
+  handleNavScroll() {
+
+    this.setState({
+      navScrolled: (document.body.scrollTop > 20)
+    });
+
   }
 
   navigateToSection(event) {
@@ -57,21 +60,36 @@ export default class Navbar extends Component {
     });
   }
 
+  navClass(){
+    var navClass = 'main is-transparent';
+
+    if (this.state.menuOpen) {
+      navClass = `${navClass} menu-open`
+    }
+    if (this.state.navScrolled) {
+      navClass = `${navClass} is-filled-white`
+    }
+
+    return navClass
+  }
+
   render() {
 
-    // var navClass = navClass ({
-    //   'main': true,
-    //   'is-transparent': true,
-    //   'is-filled-white': this.state.self
-    //   // 'menu-open':
-    //
-    // });
+    var btnClass = 'button-wrapper';
+    var menuClass = 'menu-wrapper';
+    var backgroundClass = 'menu-background'
 
+    var menuOpenString = ' menu-open';
 
+    if (this.state.menuOpen) {
+      btnClass += menuOpenString;
+      menuClass += menuOpenString;
+      backgroundClass += menuOpenString;
+    }
 
     return(
       <div id='header' className='header'>
-        <nav onScroll={this.handleScroll} id='nav' className={this.state.className} role='primary'>
+        <nav onScroll={this.handleNavScroll} id='nav' className={this.navClass()} role='primary'>
           <div className='content'>
             <div className='menu-cog'>
               <div className='logo-wrap' >
@@ -80,7 +98,7 @@ export default class Navbar extends Component {
                 </a>
               </div>
             </div>
-            <div className='menu-wrapper'>
+            <div id='menu' className={menuClass}>
               <ul className='menu'>
                 <li className='menu-item'>
                   <a href='/work' className='menu-link'>Services</a>
@@ -99,28 +117,14 @@ export default class Navbar extends Component {
                 </li>
               </ul>
             </div>
-            <div onClick={this.handleNavClick} className={this.state.buttonClassName}>
+            <div id='button' onClick={this.handleNavClick} className={btnClass}>
               <div className='l-1'></div>
               <div className='l-2'></div>
             </div>
           </div>
         </nav>
+        <div className={backgroundClass} />
       </div>
     );
   }
 }
-
-
-
-{/* <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-  <span className="icon-bar"></span>
-  <span className="icon-bar"></span>
-  <span className="icon-bar"></span>
-</button> */}
-{/* <div className="collapse navbar-collapse" id="myNavbar">
-<ul className="nav navbar-nav navbar-right">
-  <li id={this.state.location == '1' ? 'active' : ''} id="1"><a href="#home" onClick={this.navigateToSection}>Home</a></li>
-  <li id={this.state.location == '2' ? 'active' : ''} id="2"><a href="#services" onClick={this.navigateToSection}>Services</a></li>
-  <li className={this.state.location == '3' ? 'active' : ''} id="3"><a href='mailto:contact@futurefoundry.co'>Contact Us</a></li>
-</ul>
-</div> */}

@@ -1,0 +1,7 @@
+
+//ACTIONS FOR THE NAVBAR //
+
+const SCROLL_NAV = 'SCROLL_NAV' {
+  type: SCROLL_NAV,
+
+}
