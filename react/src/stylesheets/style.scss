@@ -47,6 +47,22 @@ p{
 
 }
 
+//**********SCSS Library Import//
+@import './lib/include-media';
+
+
+
+//********** mixins for vendors *************//
+
+//fade-in transition//
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+
 
 
 //Import of feature style sheets

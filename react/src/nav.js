@@ -75,7 +75,7 @@ export default class Navbar extends Component {
 
   render() {
 
-    var btnClass = 'button-wrapper';
+    var btnClass = 'button';
     var menuClass = 'menu-wrapper';
     var backgroundClass = 'menu-background'
 
@@ -84,7 +84,10 @@ export default class Navbar extends Component {
     if (this.state.menuOpen) {
       btnClass += menuOpenString;
       menuClass += menuOpenString;
-      backgroundClass += menuOpenString;
+    }
+
+    if (this.state.navScrolled) {
+      btnClass += ' is-filled-white';
     }
 
     return(
@@ -98,7 +101,7 @@ export default class Navbar extends Component {
                 </a>
               </div>
             </div>
-            <div id='menu' className={menuClass}>
+            <div className={menuClass}>
               <ul className='menu'>
                 <li className='menu-item'>
                   <a href='/work' className='menu-link'>Services</a>
@@ -117,13 +120,14 @@ export default class Navbar extends Component {
                 </li>
               </ul>
             </div>
-            <div id='button' onClick={this.handleNavClick} className={btnClass}>
-              <div className='l-1'></div>
-              <div className='l-2'></div>
+            <div onClick={this.handleNavClick} className={btnClass}>
+              <div className='button-wrapper'>
+                <div className='l-1'></div>
+                <div className='l-2'></div>
+              </div>
             </div>
           </div>
         </nav>
-        <div className={backgroundClass} />
       </div>
     );
   }
