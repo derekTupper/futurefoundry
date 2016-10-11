@@ -3,6 +3,9 @@
 $nav-num-element: 5;
 $menu-item-width: 80%;
 
+
+
+
 //full-screen styles
 nav.main {
   height: 60px;
@@ -13,7 +16,9 @@ nav.main {
   display: block;
   vertical-align: baseline;
 
-
+  .menu-open {
+    visibility: visible;
+  }
 
   .content {
     display: block;
@@ -44,6 +49,20 @@ nav.main {
   .menu-wrapper {
     vertical-align: baseline;
 
+    @include media('<=tablet') {
+      visibility: hidden;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      position: fixed;
+      background: white;
+      z-index: 1000;
+    }
+
+    .menu-open {
+      visibility: visible;
+    }
+
     .menu {
       position: inline-block;
       list-style-type: none;
@@ -60,6 +79,7 @@ nav.main {
         width: ($menu-item-width / $nav-num-element);
         vertical-align: baseline;
       }
+
     }
   }
 
@@ -119,8 +139,6 @@ nav.main {
 }
 
 @include media('<=tablet') {
-  
-
   .button {
     display: block;
     margin-top: 14px;
@@ -138,7 +156,6 @@ nav.main {
       height: 3px;
       margin-bottom: 7px;
       width: 25px;
-
     }
 
     .l-2 {
@@ -148,22 +165,11 @@ nav.main {
     }
   }
 
-  .menu-background {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    visibility: hidden;
-    z-index: 5;
-  }
 
 }
 
 
-.menu-open {
-  visibility: visible;
-  top: 0;
-  opacity: 1;
+
 
   .l-1 {
     background: black;
@@ -177,4 +183,3 @@ nav.main {
     margin-bottom: 7px;
 
   }
-}
