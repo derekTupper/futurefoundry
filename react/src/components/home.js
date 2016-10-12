@@ -28,18 +28,22 @@ export default class Home extends Component  {
 
     return (
       <div className='home'>
-        <div className='rwpWrapper'>
-            <h1 className='rwpSentence'>
-                We forge your future.
-            </h1>
+        <div className=' col-lg-12'>
+          <div className='scentWrapper col-xs-12 col-sm-12 col-sm-offset-1 col-md-6 col-lg-5 col-lg-offset-1 '>
+            <h1>Hello, Welcome! </h1>
+            <p>We are Future Foundry a dev shop that specializes in providing technology solutions that elevate the experiences of
+             your companies customers and employees</p>
+            <button className='btn  btn-lg'>Contact Us</button>
+          </div>
+          <div className='rwpWrapper col-xs-12 col-sm-10 col-sm-offset-1 col-md-6 col-md-offset-0 col-lg-6'>
             <div className='rwpImgs'>
                 <span className='show-d hide-t hide-m'><img src={webDesktop}/></span>
                 <span><img src={iphoneDesktop}/></span>
                 <span><img src={imacDesktop}/></span>
                 <span><img src={ipadDesktop}/></span>
             </div>
+          </div>
         </div>
-        <div><a onClick={this.clickScroll} href="#services">Learn More</a></div>
       </div>
     );
   }

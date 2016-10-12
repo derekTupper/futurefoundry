@@ -2,7 +2,6 @@ import React, { Component, ExecutionEnvironment }  from 'react';
 
 const classNames = require('classnames');
 
-import foundryLogoLg from './assets/img/foundrylogo_lg.png';
 import foundryCogLg from './assets/img/foundrycogs_lg.png';
 
 export default class Navbar extends Component {
@@ -96,7 +95,7 @@ export default class Navbar extends Component {
           <div className='content'>
             <div className='menu-cog'>
               <div className='logo-wrap' >
-                <a href='/' className='logo-link'>
+                <a href='#/' className='logo-link'>
                   <img className='foundry-logo' src={foundryCogLg} />
                 </a>
               </div>
@@ -104,19 +103,19 @@ export default class Navbar extends Component {
             <div className={menuClass}>
               <ul className='menu'>
                 <li className='menu-item'>
-                  <a href='/work' className='menu-link'>Services</a>
+                  <a href='#/work' className='menu-link'>Work</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='/work' className='menu-link'>Work</a>
+                  <a href='#/services' className='menu-link'>Services</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='#/work' className='menu-link'>About</a>
+                  <a href='#/about' className='menu-link'>About</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='#/work' className='menu-link'>Blog</a>
+                  <a href='#/blog' className='menu-link'>Blog</a>
                 </li>
                 <li className='menu-item'>
-                  <a href='#/work' className='menu-link'>Contact</a>
+                  <a href='#/contact' className='menu-link'>Contact</a>
                 </li>
               </ul>
             </div>

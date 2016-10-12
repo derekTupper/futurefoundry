@@ -8,35 +8,41 @@ $full-width: 100%;
 
 
 header {
-  overflow-y: scroll;
+  overflow: hidden;
 }
 
 body {
   overflow-y: scroll;
 }
 
-
-
-
 $pcolor-dark: #5D7B93;
 $tcolor-dark: #D90368;
 
+$titlefont-bold: 'OpenSans-Semibold';
+$titlefont-regular: 'OpenSans-Regular';
+$contentfont-regular: 'Roboto-Regular';
 
-$titlefont: 'Muli';
-$contentfont: 'Oxygen';
+//put this in there so the page woud re-render. $contentfont is deprecated
+//and I was too lazy to look for it in deprecated files.
+
+$contentfont: 'Nothing';
 
 @font-face {
-  font-family: 'Roboto';
-  font-weight: 400;
+  font-family: 'Roboto-Regular';
   font-style: normal;
-  src: url('../assets/fonts/Roboto-regular/Roboto-regular.eot');
-  src: url('../assets/fonts/Roboto-regular/Roboto-regular.eot?#iefix') format('embedded-opentype'),
-       local('Roboto'),
-       local('Roboto-regular'),
-       url('../assets/fonts/Roboto-regular/Roboto-regular.woff2') format('woff2'),
-       url('../assets/fonts/Roboto-regular/Roboto-regular.woff') format('woff'),
-       url('../assets/fonts/Roboto-regular/Roboto-regular.ttf') format('truetype'),
-       url('../assets/fonts/Roboto-regular/Roboto-regular.svg#Roboto') format('svg');
+  src: url('../assets/fonts/Roboto/Roboto-regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'OpenSans-Regular';
+  font-weight: normal;
+  src: url('../assets/fonts/OpenSans/OpenSans-Regular.ttf') format('truetype')
+}
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  font-weight: normal;
+  src: url('../assets/fonts/OpenSans/OpenSans-Semibold.ttf') format('truetype')
 }
 
 

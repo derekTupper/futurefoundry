@@ -21,8 +21,8 @@ export default class App extends Component {
         <div data-spy="scroll">
           <Nav />
           <Home />
-          <Dev />
-          <Footer />
+          {/* <Dev />
+          <Footer /> */}
         </div>
     );
   }

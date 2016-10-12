@@ -2,23 +2,17 @@
 
 $nav-num-element: 5;
 $menu-item-width: 80%;
-
-
-
+$nav-bar-height: 60px;
 
 //full-screen styles
 nav.main {
-  height: 60px;
+  height: $nav-bar-height;
   position: fixed;
   top: 0px;
   width: $full-width;
   z-index: 10;
   display: block;
   vertical-align: baseline;
-
-  .menu-open {
-    visibility: visible;
-  }
 
   .content {
     display: block;
@@ -27,8 +21,6 @@ nav.main {
     padding-left: 10%;
     padding-right: 5%;
   }
-
-
 
   .menu-cog {
     display: inline-block;
@@ -43,25 +35,10 @@ nav.main {
       width: 40px;
       vertical-align: baseline;
     }
-
   }
 
   .menu-wrapper {
     vertical-align: baseline;
-
-    @include media('<=tablet') {
-      visibility: hidden;
-      height: 100%;
-      width: 100%;
-      left: 0;
-      position: fixed;
-      background: white;
-      z-index: 1000;
-    }
-
-    .menu-open {
-      visibility: visible;
-    }
 
     .menu {
       position: inline-block;
@@ -73,73 +50,86 @@ nav.main {
 
       .menu-item {
         float: left;
-        height: 60px;
-        font-style: $titlefont;
-        font-weight: lighter;
+        height: $nav-bar-height;
         width: ($menu-item-width / $nav-num-element);
         vertical-align: baseline;
+
+        .menu-link {
+          display: block;
+          padding-top: 21px;
+          padding-right: 24px;
+          padding-bottom: 21px;
+          padding-left: 24px;
+          font-family: $titlefont-regular;
+          font-size: 13.1px;
+          font-weight: 900;
+          text-transform: uppercase;
+          text-decoration: none;
+          color: white;
+        }
+
+        .menu-link:hover {
+          background-color: white;
+          color: black;
+          @include transition(background-color .50s linear);
+        }
       }
-
     }
-  }
-
-  .menu-link {
-    display: block;
-    padding-top: 21.5px;
-    padding-right: 24px;
-    padding-bottom: 21.5px;
-    padding-left: 24px;
-    font-family: $titlefont;
-    font-weight: 500;
-    font-size: 12.1px;
-    font-weight: bold;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-  }
-
-
-  .menu-link:hover {
-    background-color: black;
-    color: white;
-    @include transition(background-color .50s linear);
-  }
-
-  .button  {
-    cursor: pointer;
   }
 }
 
-  .is-transparent {
-    background-color: transparent;
-    @include transition(background-color .25s linear);
-  }
 
-  .is-filled-white {
-    background-color: transparentize(white, .10);
-    @include transition(background-color .25s linear);
+.is-transparent {
+  background-color: transparent;
+  @include transition(background-color .25s linear);
+}
 
-    .button {
-      background: none;
-    }
-
-    .l-1 {
-      background: black;
-    }
-
-    .l-2 {
-      background: black;
-    }
-  }
-
-
-.is-dark {
-  background: black;
+.is-filled-white {
+  background-color: transparentize(black, .10);
   @include transition(background-color .25s linear);
 }
 
 @include media('<=tablet') {
-  .button {
+
+  nav.main .menu-wrapper {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+
+    @include transition(background-color .25 linear);
+  }
+
+  nav.main .menu-wrapper.menu-open  {
+    visibility: visible;
+
+
+  }
+
+  nav.main .inner {
+    margin-left: 0;
+  }
+
+  nav.main .menu {
+    float: left;
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  nav.main .menu-wrapper .menu .menu-item {
+    float: left;
+    display: block;
+    width: 100%;
+  }
+
+
+  .button{
     display: block;
     margin-top: 14px;
     margin-right: 15px;
@@ -165,21 +155,36 @@ nav.main {
     }
   }
 
+  .button.menu-open {
 
+    .l-1 {
+      transform: rotate3d(0,0,1,45deg);
+    }
+
+    .l-2 {
+      transform: rotate3d(0,0,1,-45deg);
+    }
+
+    // .l-1 {
+    //   transform: rotate(40deg);
+    //   margin-bottom: 0px;
+    //
+    // }
+    //
+    // .l-2 {
+    //   transform: rotate(130deg);
+    //   margin-bottom: 0px;
+    // }
+  }
+
+  .button.is-filled-white {
+    background:none;
+
+    .l-1 {
+      background: white;
+    }
+    .l-2 {
+      background: white;
+    }
+  }
 }
-
-
-
-
-  .l-1 {
-    background: black;
-    transform: rotate(40deg);
-
-  }
-
-  .l-2 {
-    background: black;
-    transform: rotate(120deg);
-    margin-bottom: 7px;
-
-  }
