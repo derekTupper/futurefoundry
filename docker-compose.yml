@@ -7,7 +7,7 @@ services:
     image: my-nginx
     container_name: my-nginx-container
     ports:
-      - "8000:8000"
+      - "8080:8080"
     volumes:
       - dist:/wwwroot/dist
   node:
