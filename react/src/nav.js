@@ -29,6 +29,16 @@ export default class Navbar extends Component {
     this.setState({
       menuOpen: !this.state.menuOpen
     });
+    // 
+    // $( ".menu-wrapper" ).animate({
+    //   backgroundColor: 'black'
+    // }, 5000, function() {
+    //   // Animation complete
+    //   console.log('i made it2');
+    // });
+    //
+    // console.log('i made it');
+
 
   }
 

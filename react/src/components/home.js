@@ -30,7 +30,7 @@ export default class Home extends Component  {
       <div className='home'>
         <div className=' col-lg-12'>
           <div className='scentWrapper col-xs-12 col-sm-12 col-sm-offset-1 col-md-6 col-lg-5 col-lg-offset-1 '>
-            <h1>Hello, Welcome! </h1>
+            <h1>Hello,</h1>
             <p>We are Future Foundry a dev shop that specializes in providing technology solutions that elevate the experiences of
              your companies customers and employees</p>
             <button className='btn  btn-lg'>Contact Us</button>
